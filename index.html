@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="playground">
+  <head>
+    <title>GopherJS Playground</title>
+    <link rel="stylesheet" type="text/css" href="playground.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    <script src="playground.js"></script>
+  </head>
+  <body ng-controller="PlaygroundCtrl">
+    <div id="banner">
+      <span id="head">playground</span>
+      <span id="controls">
+        <input type="button" value="Run" ng-click="run(false)" />
+        <input type="button" value="Format" ng-click="format()" />
+        <label title="Rewrite imports on Format">
+          <input ng-model="imports" type="checkbox" />Imports
+        </label>
+        <input type="button" value="Share" ng-click="share()" />
+        <input
+          type="text"
+          class="show-share-url-{{showShareUrl}}"
+          id="share-url"
+          value="{{shareUrl}}"
+          onfocus="select()"
+        />
+      </span>
+    </div>
+
+    <div class="box" id="content">
+      <div class="box yellow" id="input">
+        <textarea
+          ng-model="code"
+          id="code"
+          autocorrect="off"
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        ></textarea>
+      </div>
+    </div>
+    <div class="box" id="output">
+      <pre ng-repeat="line in output" class="{{line.type}}">
+{{line.content}}&nbsp;</pre
+      >
+    </div>
+  </body>
+</html>
