@@ -30,7 +30,7 @@
     "lint:eslint": "eslint --ext js,jsx,ts,tsx .",
     "clean": "recursive-delete build",
     "prepush": "run-s fix build test",
-    "npm:publish": "npm publish"
+    "npm:publish": "npm run prepush && npm publish"
   },
   "dependencies": {},
   "devDependencies": {
