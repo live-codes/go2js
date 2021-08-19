@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Go2JS</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <script>
+      const code = `
+package main
+
+import (
+  "fmt"
+  "syscall/js"
+)
+
+func main() {
+  fmt.Println("Hello, from Go")
+  js.Global().Call("alert", "Hello, JavaScript")
+  println("Hello, JS console")
+}
+`;
+      window.go2js.compile(code).then(eval).catch(console.warn);
+    </script>
+  </body>
+</html>

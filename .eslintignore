@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+coverage
+.eslintrc.js
+pkg
+**/*.json
+scripts
+src/*.js
+src/*.map
