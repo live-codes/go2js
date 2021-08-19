@@ -1,6 +1,6 @@
 {
   "name": "go2js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Compile Go to JS in the browser (using GopherJS)",
   "main": "build/index.js",
   "module": "build/index.esm.js",
