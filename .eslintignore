@@ -6,5 +6,5 @@ coverage
 pkg
 **/*.json
 scripts
-src/*.js
-src/*.map
+src/**/*.js
+src/**/*.map

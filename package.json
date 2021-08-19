@@ -7,7 +7,7 @@
   "author": "Hatem Hosny",
   "license": "MIT",
   "keywords": [],
-  "private": true,
+  "private": false,
   "repository": {
     "url": "https://github.com/hatemhosny/go2js"
   },
@@ -18,7 +18,7 @@
     "build": "run-s clean build:* copy:*",
     "build:lib": "bash ./scripts/build.sh",
     "build:ts": "tsc --emitDeclarationOnly --outFile build/index.d.ts",
-    "build:api-docs": "typedoc --entryPoints src/index.ts --entryPoints src/format.ts --out build/api-docs --exclude **/*.spec.ts --plugin none",
+    "build:api-docs": "typedoc --entryPoints src/index.ts --out build/api-docs --exclude **/*.spec.ts --plugin none",
     "copy:pkg": "recursive-copy pkg build/pkg",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier src --ignore-path .eslintignore --write",
@@ -30,7 +30,7 @@
     "lint:eslint": "eslint --ext js,jsx,ts,tsx .",
     "clean": "recursive-delete build",
     "prepush": "run-s fix build test",
-    "npm:publish": "npm publish build"
+    "npm:publish": "npm publish"
   },
   "dependencies": {},
   "devDependencies": {
