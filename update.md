@@ -32,3 +32,4 @@ export GOPHERJS_GOROOT="$(go env GOROOT)"
 ```
 
 update Go version in `src/compile/compile.go`
+pull changes in pkg (from playground submodule)
