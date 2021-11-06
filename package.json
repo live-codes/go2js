@@ -1,15 +1,15 @@
 {
-  "name": "go2js",
-  "version": "0.2.0",
+  "name": "@live-codes/go2js",
+  "version": "0.3.0",
   "description": "Compile Go to JS in the browser (using GopherJS)",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "author": "Hatem Hosny",
-  "license": "MIT",
+  "license": "BSD 2-Clause 'Simplified' License",
   "keywords": [],
   "private": false,
   "repository": {
-    "url": "https://github.com/hatemhosny/go2js"
+    "url": "https://github.com/live-codes/go2js"
   },
   "scripts": {
     "start": "run-p watch serve",
@@ -19,10 +19,10 @@
     "build:lib": "bash ./scripts/build.sh",
     "build:ts": "tsc --emitDeclarationOnly --outFile build/index.d.ts",
     "build:api-docs": "typedoc --entryPoints src/index.ts --out build/api-docs --exclude **/*.spec.ts --plugin none",
-    "copy:pkg": "recursive-copy pkg build/pkg",
+    "copy:pkg": "recursive-copy gopherjs.github.io/playground/pkg build/pkg",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier src --ignore-path .eslintignore --write",
-    "fix:eslint": "eslint --fix --ext js,jsx,ts,tsx .",
+    "fix:eslint": "eslint --fix --esxt js,jsx,ts,tsx .",
     "test": "run-s test:*",
     "test:lint": "run-s lint:*",
     "test:unit": "jest src --passWithNoTests",

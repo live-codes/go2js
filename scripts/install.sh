@@ -1,8 +1,7 @@
-export GO111MODULE=off
-export GOPHERJS_GOROOT="$(go env GOROOT)"
+export GO111MODULE=on
 
-go get -u github.com/gopherjs/gopherjs
-go get -u github.com/gopherjs/gopherjs.github.io
-go get -u github.com/neelance/go-angularjs
-go get -u honnef.co/go/js/dom
-go get -u honnef.co/go/js/xhr
+go install github.com/gopherjs/gopherjs
+go install github.com/gopherjs/gopherjs.github.io
+go install github.com/neelance/go-angularjs
+go install honnef.co/go/js/dom
+go install honnef.co/go/js/xhr

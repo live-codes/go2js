@@ -1,0 +1,3 @@
+[submodule "gopherjs.github.io"]
+	path = gopherjs.github.io
+	url = https://github.com/gopherjs/gopherjs.github.io
