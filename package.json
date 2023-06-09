@@ -1,15 +1,22 @@
 {
   "name": "@live-codes/go2js",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Compile Go to JS in the browser (using GopherJS)",
-  "main": "build/index.js",
-  "module": "build/index.esm.js",
   "author": "Hatem Hosny",
   "license": "BSD 2-Clause 'Simplified' License",
   "keywords": [],
   "private": false,
   "repository": {
     "url": "https://github.com/live-codes/go2js"
+  },
+  "main": "./build/go2js.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "default": "./build/index.js"
+    }
   },
   "scripts": {
     "start": "run-p watch serve",

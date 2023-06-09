@@ -11,9 +11,9 @@ which go
 
 rm -rf /usr/bin/go
 
-curl -O https://dl.google.com/go/go1.17.1.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/go1.18.5.linux-amd64.tar.gz
 
-tar -xvf go1.17.1.linux-amd64.tar.gz
+tar -xvf go1.18.5.linux-amd64.tar.gz
 
 mv go /usr/local
 
@@ -27,7 +27,7 @@ go version
 ## Update Gopherjs
 
 ```bash
-GO111MODULE=off go get -u github.com/gopherjs/gopherjs
+GO111MODULE=off go get -v github.com/gopherjs/gopherjs
 export GOPHERJS_GOROOT="$(go env GOROOT)"
 ```
 

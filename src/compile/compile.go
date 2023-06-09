@@ -82,11 +82,16 @@ func main() {
 					}
 
 					data := js.Global.Get("Uint8Array").New(req.Response).Interface().([]byte)
-					packages[path], err = compiler.ReadArchive(path+".a", path, bytes.NewReader(data), importContext.Packages)
+					packages[path], err = compiler.ReadArchive(path+".a", bytes.NewReader(data))
 					if err != nil {
 						callback(err.Error(), nil)
 						return
 					}
+          if err := packages[path].RegisterTypes(importContext.Packages); err != nil {
+						callback(err.Error(), nil)
+            return
+          }
+
 					pkgsReceived++
 					if pkgsReceived == len(pkgsToLoad) {
 						compile(code, baseUrl, callback)
@@ -100,7 +105,7 @@ func main() {
 
 		jsCode := bytes.NewBuffer(nil)
 		jsCode.WriteString("try{\n")
-		compiler.WriteProgramCode(allPkgs, &compiler.SourceMapFilter{Writer: jsCode}, "1.17.1")
+		compiler.WriteProgramCode(allPkgs, &compiler.SourceMapFilter{Writer: jsCode}, "1.18.5")
 		jsCode.WriteString("} catch (err) {\nconsole.error(err.message);\n}\n")
 		js.Global.Set("$checkForDeadlock", true)
 		callback(nil, jsCode.String())
