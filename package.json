@@ -1,6 +1,6 @@
 {
   "name": "@live-codes/go2js",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Compile Go to JS in the browser (using GopherJS)",
   "author": "Hatem Hosny",
   "license": "BSD 2-Clause 'Simplified' License",
