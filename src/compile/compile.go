@@ -105,7 +105,7 @@ func main() {
 
 		jsCode := bytes.NewBuffer(nil)
 		jsCode.WriteString("try{\n")
-		compiler.WriteProgramCode(allPkgs, &compiler.SourceMapFilter{Writer: jsCode}, "1.18.5")
+		compiler.WriteProgramCode(allPkgs, &compiler.SourceMapFilter{Writer: jsCode}, "1.19.13")
 		jsCode.WriteString("} catch (err) {\nconsole.error(err.message);\n}\n")
 		js.Global.Set("$checkForDeadlock", true)
 		callback(nil, jsCode.String())
