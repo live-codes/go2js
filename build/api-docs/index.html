@@ -68,7 +68,7 @@
 					<h2>Usage</h2>
 				</a>
 				<p>UMD:</p>
-				<pre><code class="language-html"><span style="color: #008000">&lt;!-- &lt;script src=&quot;https://cdn.jsdelivr.net/npm/go2js/build/go2js.js&quot;&gt;&lt;/script&gt; --&gt;</span>
+				<pre><code class="language-html"><span style="color: #008000">&lt;!-- &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/go2js.js&quot;&gt;&lt;/script&gt; --&gt;</span>
 <span style="color: #800000">&lt;script</span><span style="color: #000000FF"> </span><span style="color: #FF0000">src</span><span style="color: #000000FF">=</span><span style="color: #0000FF">&quot;go2js.js&quot;</span><span style="color: #800000">&gt;&lt;/script&gt;</span>
 <span style="color: #800000">&lt;script&gt;</span>
 <span style="color: #000000FF">  </span><span style="color: #0000FF">const</span><span style="color: #000000FF"> </span><span style="color: #0070C1">code</span><span style="color: #000000FF"> </span><span style="color: #000000">=</span><span style="color: #000000FF"> </span><span style="color: #A31515">`</span>
@@ -83,7 +83,7 @@
 <span style="color: #000000FF">    .</span><span style="color: #795E26">format</span><span style="color: #000000FF">(</span><span style="color: #001080">code</span><span style="color: #000000FF">)</span>
 <span style="color: #000000FF">    .</span><span style="color: #795E26">then</span><span style="color: #000000FF">((</span><span style="color: #001080">formatted</span><span style="color: #000000FF">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000FF"> {</span>
 <span style="color: #000000FF">      </span><span style="color: #001080">console</span><span style="color: #000000FF">.</span><span style="color: #795E26">log</span><span style="color: #000000FF">(</span><span style="color: #001080">formatted</span><span style="color: #000000FF">);</span>
-<span style="color: #000000FF">      </span><span style="color: #008000">// return window.go2js.compile(formatted, &#039;https://unpkg.com/go2js/build/&#039;);</span>
+<span style="color: #000000FF">      </span><span style="color: #008000">// return window.go2js.compile(formatted, &#039;https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/&#039;);</span>
 <span style="color: #000000FF">      </span><span style="color: #AF00DB">return</span><span style="color: #000000FF"> </span><span style="color: #001080">window</span><span style="color: #000000FF">.</span><span style="color: #001080">go2js</span><span style="color: #000000FF">.</span><span style="color: #795E26">compile</span><span style="color: #000000FF">(</span><span style="color: #001080">formatted</span><span style="color: #000000FF">);</span>
 <span style="color: #000000FF">    })</span>
 <span style="color: #000000FF">    .</span><span style="color: #795E26">then</span><span style="color: #000000FF">(</span><span style="color: #001080">eval</span><span style="color: #000000FF">)</span>
@@ -91,7 +91,7 @@
 <span style="color: #800000">&lt;/script&gt;</span>
 </code></pre>
 				<p>ESM:</p>
-				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">compile</span><span style="color: #000000">, </span><span style="color: #001080">format</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://unpkg.com/go2js&#039;</span><span style="color: #000000">;</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">compile</span><span style="color: #000000">, </span><span style="color: #001080">format</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;https://cdn.jsdelivr.net/npm/@live-codes/go2js&#039;</span><span style="color: #000000">;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">code</span><span style="color: #000000"> = </span><span style="color: #A31515">`</span>
 <span style="color: #A31515">package main</span>
@@ -105,7 +105,7 @@
 <span style="color: #795E26">format</span><span style="color: #000000">(</span><span style="color: #001080">code</span><span style="color: #000000">)</span>
 <span style="color: #000000">  .</span><span style="color: #795E26">then</span><span style="color: #000000">((</span><span style="color: #001080">formatted</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">formatted</span><span style="color: #000000">);</span>
-<span style="color: #000000">    </span><span style="color: #008000">// return compile(formatted, &#039;https://unpkg.com/go2js/build/&#039;);</span>
+<span style="color: #000000">    </span><span style="color: #008000">// return compile(formatted, &#039;https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/&#039;);</span>
 <span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #795E26">compile</span><span style="color: #000000">(</span><span style="color: #001080">formatted</span><span style="color: #000000">);</span>
 <span style="color: #000000">  })</span>
 <span style="color: #000000">  .</span><span style="color: #795E26">then</span><span style="color: #000000">(</span><span style="color: #001080">eval</span><span style="color: #000000">)</span>

@@ -10,12 +10,15 @@ export const getUrl = (baseUrl?: string) => {
     }
   }
 
+  const buildPath = '/go2js/build/index.js';
   const metaUrl = import.meta?.url;
   const currentScriptSrc = (document?.currentScript as HTMLScriptElement)?.src;
   const locationHref = location.href;
 
   const url =
-    metaUrl && typeof metaUrl === 'string'
+    metaUrl && typeof metaUrl === 'string' && !metaUrl.endsWith('.js') // https://unpkg.com/@live-codes/go2js
+      ? metaUrl + buildPath
+      : metaUrl && typeof metaUrl === 'string'
       ? metaUrl
       : currentScriptSrc && typeof currentScriptSrc === 'string'
       ? currentScriptSrc

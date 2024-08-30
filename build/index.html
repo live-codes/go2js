@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Go2JS</title>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/go2js/build/go2js.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/go2js.js"></script> -->
     <script src="go2js.js"></script>
   </head>
   <body>
@@ -22,7 +22,7 @@ println("Hello, JS console")}
         .format(code)
         .then((formatted) => {
           console.log(formatted);
-          // return window.go2js.compile(formatted, 'https://cdn.jsdelivr.net/npm/go2js/build/');
+          // return window.go2js.compile(formatted, 'https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/');
           return window.go2js.compile(formatted);
         })
         .then(eval)

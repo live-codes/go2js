@@ -2,7 +2,6 @@ package main
 
 import (
 	"go/format"
-
 	"github.com/gopherjs/gopherjs/js"
 )
 
