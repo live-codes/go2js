@@ -10,7 +10,7 @@ export const getUrl = (baseUrl?: string) => {
     }
   }
 
-  const buildPath = '/go2js/build/index.js';
+  const buildPath = '/build/index.js';
   const metaUrl = import.meta?.url;
   const currentScriptSrc = (document?.currentScript as HTMLScriptElement)?.src;
   const locationHref = location.href;
