@@ -11,7 +11,7 @@ The motive for this project was to enable client-side compiling of Golang to Jav
 UMD:
 
 ```html
-<!-- <script src="https://cdn.jsdelivr.net/npm/go2js/build/go2js.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/go2js.js"></script> -->
 <script src="go2js.js"></script>
 <script>
   const code = `
@@ -26,7 +26,7 @@ println("Hello, JS console")}
     .format(code)
     .then((formatted) => {
       console.log(formatted);
-      // return window.go2js.compile(formatted, 'https://unpkg.com/go2js/build/');
+      // return window.go2js.compile(formatted, 'https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/');
       return window.go2js.compile(formatted);
     })
     .then(eval)
@@ -37,7 +37,7 @@ println("Hello, JS console")}
 ESM:
 
 ```js
-import { compile, format } from 'https://unpkg.com/go2js';
+import { compile, format } from 'https://cdn.jsdelivr.net/npm/@live-codes/go2js';
 
 const code = `
 package main
@@ -51,7 +51,7 @@ println("Hello, JS console")}
 format(code)
   .then((formatted) => {
     console.log(formatted);
-    // return compile(formatted, 'https://unpkg.com/go2js/build/');
+    // return compile(formatted, 'https://cdn.jsdelivr.net/npm/@live-codes/go2js/build/');
     return compile(formatted);
   })
   .then(eval)
